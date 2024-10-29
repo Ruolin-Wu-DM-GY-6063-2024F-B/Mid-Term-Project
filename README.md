@@ -1,3 +1,13 @@
+## Milestone 02
+1. **Is your project split into different moments? or scenes?**
+   My project based on the scenes, I have draw them, and want to make every layer into parallax scrolling.
+2. **Which interactive events will you respond to? mouse? keyboard? time?**
+   I want to use keyboard, make character move, and it will collide the bricks, the blood would decrease.
+3. **Do you need any special files, arrays or objects?**
+   Yes, I uploaded many png files, also considering whether to insert music from New Jeans.
+4. **What are the custom functions that you’ll have to write?**
+   I had written the 
+## Milestone 01 
 1. **What book, album, or movie did you choose? What is it about?**  
    I chose the self-titled album from NewJeans.  
    ![alt text](image.png)  
