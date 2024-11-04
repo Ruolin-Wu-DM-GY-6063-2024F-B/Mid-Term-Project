@@ -121,11 +121,12 @@ function draw() {
     return;
   }
 
-  drawSeamlessLayer(bk_img, bk_X, bk_imgWidth, height);
+  let bk_Y = 0;
+  drawSeamlessLayer(bk_img, bk_X, bk_Y,bk_imgWidth, height);
 
   let frontLayer_Y = height/3;
-  drawSeamlessLayer(front_layer1, frontLayer1_X, frontlayer1_Width, front_layer1.height, frontLayer_Y);
-  drawSeamlessLayer(front_layer2, frontLayer2_X, frontlayer1_Width, front_layer2.height, frontLayer_Y);
+  drawSeamlessLayer(front_layer1, frontLayer1_X, frontLayer_Y,frontlayer1_Width, front_layer1.height);
+  drawSeamlessLayer(front_layer2, frontLayer2_X, frontLayer_Y ,frontlayer1_Width, front_layer2.height);
 
   for (let i = 0; i < bricks.length; i++) {
     let brick = bricks[i];
@@ -138,21 +139,11 @@ function draw() {
   time += 0.05;
 
   let cloudPosY = height/2;
-  drawSeamlessLayer(cloud_frt, cloud_X, cloud_frtWidth, cloud_frt.height, cloudPosY);
+  drawSeamlessLayer(cloud_frt, cloud_X, cloudPosY,cloud_frtWidth, cloud_frt.height);
 
   checkCollision();
 
   displayBlood();
-}
-
-function drawSeamlessLayer(img, imgx, imgWidth, imgHeight, imgy = 0) {
-  let x1 = imgx % imgWidth;
-  if (x1 > 0) {
-    x1 -= imgWidth;
-  }
-  image(img, x1, imgy, imgWidth, imgHeight);
-  image(img, x1 + imgWidth, imgy, imgWidth, imgHeight);
-  image(img, x1 + imgWidth * 2, imgy, imgWidth, imgHeight);
 }
 
 function chara_key_move() {
@@ -176,6 +167,12 @@ function chara_key_move() {
   if (keyIsDown(DOWN_ARROW)) {
     y += speed;
   }
+}
+
+function drawSeamlessLayer(img, imgx, imgPOSY,imgWidth, imgHeight) {
+  image(img, imgx, imgPOSY, imgWidth, imgHeight);
+  image(img, imgx+ imgWidth, imgPOSY, imgWidth, imgHeight);
+  image(img, imgx+ 2*imgWidth, imgPOSY, imgWidth, imgHeight);
 }
 
 function chara_wave(x, y, time) {
@@ -234,7 +231,7 @@ function displayPopup(message) {
   } else {
     fill(230);
   }
-  rect(buttonX, buttonY, buttonWidth, buttonHeight, 30);
+  rect(buttonX, buttonY, buttonWidth, buttonHeight, 10);
 
   fill(0);
   textSize(24);
