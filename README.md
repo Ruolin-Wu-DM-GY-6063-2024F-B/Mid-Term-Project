@@ -6,7 +6,7 @@
 3. **Do you need any special files, arrays or objects?**
    Yes, I uploaded many png files, also considering whether to insert music from New Jeans.
 4. **What are the custom functions that you’ll have to write?**
-   I had written the 
+   I had written the character move function, and let it slightly move with sin, also with the collision code, but I haven't finished the game over page. Also I have make the parallax scrolling.
 ## Milestone 01 
 1. **What book, album, or movie did you choose? What is it about?**  
    I chose the self-titled album from NewJeans.  
