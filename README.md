@@ -1,3 +1,11 @@
+## Milestone 03
+1. **what you’ve done this week**
+I complete the whole code, improve the parallax scrolling part for every layers (I tried 4!). And I use splice to delete the brick that the character have collided with.
+2. **description of the final interactivity or time-based logic**
+I use the key to make the character move and interact with the elements in the window.
+3. **images, drawings, sketches**
+I did the background drawing by myself, and modified them with the 8-bit style using ps, use the code to do it is too much.
+
 ## Milestone 02
 1. **Is your project split into different moments? or scenes?**
    My project based on the scenes, I have draw them, and want to make every layer into parallax scrolling.
